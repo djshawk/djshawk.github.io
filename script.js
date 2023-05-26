@@ -12,20 +12,11 @@ function showMessage(response) {
   if (response === "Yes") {
     // Display flower bouquet emojis
     message.innerHTML = "🌸🌷🌺";
-    // Simulate sending an email (replace with your own implementation)
-    simulateEmailSending();
   } else if (response === "No") {
-    message.innerHTML = "Sorry, that's not an option.";
+    message.innerHTML = "NO IS NOT AN OPTION";
   }
 
   messageContainer.classList.remove("hidden");
-}
-
-// Simulate email sending process
-function simulateEmailSending() {
-  // Replace with your own implementation to send an email
-  // This is a placeholder to show a console message
-  console.log("Email sent!");
 }
 
 // Event listener to show buttons after the video finishes playing
