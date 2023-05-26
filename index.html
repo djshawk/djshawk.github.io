@@ -7,6 +7,11 @@
       font-family: Arial, sans-serif;
       text-align: center;
       background-color: #f4f4f4;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      margin: 0;
     }
 
     h1 {
@@ -16,10 +21,7 @@
     .heart {
       width: 1000px;
       height: 1000px;
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
+      position: relative;
       animation: pulse 1s infinite;
     }
 
@@ -46,13 +48,13 @@
 
     @keyframes pulse {
       0% {
-        transform: translate(-50%, -50%) scale(1);
+        transform: scale(1);
       }
       50% {
-        transform: translate(-50%, -50%) scale(1.2);
+        transform: scale(1.2);
       }
       100% {
-        transform: translate(-50%, -50%) scale(1);
+        transform: scale(1);
       }
     }
   </style>
@@ -66,7 +68,7 @@
     const heart = document.querySelector('.heart');
     heart.addEventListener('click', function() {
       heart.style.animation = 'none'; // Remove the pulse animation
-      heart.style.transform = 'translate(-50%, -50%) scale(5)'; // Enlarge the heart
+      heart.style.transform = 'scale(5)'; // Enlarge the heart
       setTimeout(function() {
         heart.style.display = 'none'; // Hide the heart after 1 second
       }, 1000);
@@ -74,3 +76,4 @@
   </script>
 </body>
 </html>
+
