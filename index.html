@@ -16,7 +16,6 @@
     .heart {
       width: 100px;
       height: 100px;
-      background-color: red;
       position: absolute;
       top: 50%;
       left: 50%;
@@ -36,15 +35,13 @@
     }
 
     .heart:before {
-      left: 50px;
-      transform: rotate(-45deg);
-      transform-origin: 0 100%;
+      left: 0;
+      transform: translateX(-50%) rotate(-45deg);
     }
 
     .heart:after {
-      left: 0;
-      transform: rotate(45deg);
-      transform-origin: 100% 100%;
+      left: 50px;
+      transform: translateX(-50%) rotate(45deg);
     }
 
     @keyframes pulse {
