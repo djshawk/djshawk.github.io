@@ -4,21 +4,19 @@ function showButtons() {
   promposalButtons.classList.remove("hidden");
 }
 
-// Function to show the message based on the selected button
+// Function to show the message
 function showMessage(response) {
-  var messageContainer = document.getElementById("messageContainer");
-  var message = document.getElementById("message");
-
   if (response === "Yes") {
-    // Display flower bouquet emojis
-    message.innerHTML = "🌸🌷🌺";
+    // Redirect to another page
+    window.location.href = "yes/yes-page.html";
   } else if (response === "No") {
-    message.innerHTML = "NO IS NOT AN OPTION";
+    alert("I learnt 3 coding languages overnight to be able to make this, NO IS NOT AN OPTION....CLICK YES OR I WILL STAB U");
   }
-
-  messageContainer.classList.remove("hidden");
 }
 
-// Event listener to show buttons after the video finishes playing
-var promVideo = document.getElementById("promVideo");
-promVideo.addEventListener("ended", showButtons);
+// Auto-play the video when the page loads
+window.addEventListener("load", function() {
+  var promVideo = document.getElementById("promVideo");
+  promVideo.play();
+  promVideo.addEventListener("ended", showButtons);
+});
