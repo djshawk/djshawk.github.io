@@ -7,11 +7,6 @@
       font-family: Arial, sans-serif;
       text-align: center;
       background-color: #f4f4f4;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      height: 100vh;
-      margin: 0;
     }
 
     h1 {
@@ -19,26 +14,13 @@
     }
 
     .heart {
+      width: 100px;
+      height: 100px;
       position: relative;
+      background-color: red;
+      margin: 0 auto;
+      border-radius: 50%;
       animation: pulse 1s infinite;
-    }
-
-    .heart:before,
-    .heart:after {
-      content: '';
-      position: absolute;
-      top: 0;
-      background: red;
-    }
-
-    .heart:before {
-      left: 0;
-      transform: translateX(-50%) rotate(-45deg);
-    }
-
-    .heart:after {
-      left: 50%;
-      transform: translateX(-50%) rotate(45deg);
     }
 
     @keyframes pulse {
@@ -57,30 +39,5 @@
 <body>
   <h1>Will you go to prom with me?</h1>
   <div class="heart"></div>
-
-  <script>
-    // Add interactive animation using JavaScript
-    const heart = document.querySelector('.heart');
-    window.addEventListener('resize', resizeHeart);
-
-    function resizeHeart() {
-      const windowWidth = window.innerWidth;
-      const windowHeight = window.innerHeight;
-      const heartSize = Math.min(windowWidth, windowHeight) * 0.4;
-
-      heart.style.width = heartSize + 'px';
-      heart.style.height = heartSize + 'px';
-    }
-
-    resizeHeart();
-
-    heart.addEventListener('click', function() {
-      heart.style.animation = 'none'; // Remove the pulse animation
-      heart.style.transform = 'scale(10)'; // Enlarge the heart
-      setTimeout(function() {
-        heart.style.display = 'none'; // Hide the heart after 1 second
-      }, 1000);
-    });
-  </script>
 </body>
 </html>
