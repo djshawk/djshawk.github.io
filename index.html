@@ -2,42 +2,20 @@
 <html>
 <head>
   <title>Promposal</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      text-align: center;
-      background-color: #f4f4f4;
-    }
-
-    h1 {
-      color: #333333;
-    }
-
-    .heart {
-      width: 100px;
-      height: 100px;
-      position: relative;
-      background-color: red;
-      margin: 0 auto;
-      border-radius: 50%;
-      animation: pulse 1s infinite;
-    }
-
-    @keyframes pulse {
-      0% {
-        transform: scale(1);
-      }
-      50% {
-        transform: scale(1.2);
-      }
-      100% {
-        transform: scale(1);
-      }
-    }
-  </style>
+  <link rel="stylesheet" type="text/css" href="styles.css">
 </head>
 <body>
-  <h1>Will you go to prom with me?</h1>
-  <div class="heart"></div>
+  <div class="container">
+    <video id="promVideo" src="path/to/your/video.mp4" controls></video>
+    <div id="promposalButtons" class="hidden">
+      <button onclick="showMessage('Yes')">Yes</button>
+      <button onclick="showMessage('No')">No</button>
+    </div>
+    <div id="messageContainer" class="hidden">
+      <p id="message"></p>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
 </body>
 </html>
