@@ -66,7 +66,7 @@
     function resizeHeart() {
       const windowWidth = window.innerWidth;
       const windowHeight = window.innerHeight;
-      const heartSize = Math.min(windowWidth, windowHeight) * 1;
+      const heartSize = Math.min(windowWidth, windowHeight) * 0.4;
 
       heart.style.width = heartSize + 'px';
       heart.style.height = heartSize + 'px';
@@ -76,7 +76,7 @@
 
     heart.addEventListener('click', function() {
       heart.style.animation = 'none'; // Remove the pulse animation
-      heart.style.transform = 'scale(5)'; // Enlarge the heart
+      heart.style.transform = 'scale(10)'; // Enlarge the heart
       setTimeout(function() {
         heart.style.display = 'none'; // Hide the heart after 1 second
       }, 1000);
