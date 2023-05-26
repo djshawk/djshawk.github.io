@@ -6,3 +6,26 @@
 .hidden {
   display: none;
 }
+
+#promposalButtons {
+  margin-top: 20px;
+}
+
+#promposalButtons button {
+  padding: 10px 20px;
+  font-size: 18px;
+  background-color: #ff4081;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-right: 10px;
+}
+
+#promposalButtons button:hover {
+  background-color: #ff669b;
+}
+
+#promposalButtons button:last-child {
+  margin-right: 0;
+}
