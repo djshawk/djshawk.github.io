@@ -1,7 +1,7 @@
 // Function to show the buttons after the video finishes playing
 function showButtons() {
   var promposalButtons = document.getElementById("promposalButtons");
-  promposalButtons.classList.remove("hidden");
+  promposalButtons.style.visibility = "visible";
 }
 
 // Function to show the message
