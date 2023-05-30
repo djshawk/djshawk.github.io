@@ -10,7 +10,7 @@ function showMessage(response) {
     // Redirect to another page
     window.location.href = "yes/yes-page.html";
   } else if (response === "No") {
-    alert("I learnt 3 coding languages, wrote a poem, and created 2 videos overnight to be able to make this, NO IS NOT AN OPTION....CLICK YES OR I WILL STAB U");
+    alert("I learnt 3 coding languages, and created 2 videos overnight to be able to make this, NO IS NOT AN OPTION....CLICK YES OR I WILL STAB U");
   }
 }
 
